@@ -14,7 +14,7 @@ The types of biodiversity data that we work with are:
 
 which we document with metadata, format to the international [Darwin Core](https://www.gbif.org/darwin-core) standard, publish on the [biodiversity.aq IPT](https://ipt.biodiversity.aq/) as open data. These data will be registered with the [Global Biodiversity Information Facility (GBIF)](https://www.gbif.org) and harvested by [OBIS](https://obis.org/) (if it contains marine data) for discovery.
 
-In this repository we keep track of [issues](https://github.com/biodiversity-aq/data-publication/issues) for published datasets. If you have questions or remarks [leave an issue](https://github.com/biodiversity-aq/data-publication/issues).
+In this repository we keep track of [issues](https://github.com/biodiversity-aq/data-publication/issues) for published datasets. If you have questions or remarks [leave an issue](https://github.com/biodiversity-aq/data-publication/issues) or send us an email at 📧 data-biodiversity-aq@naturalsciences.be.
 
 ## Datasets
 
