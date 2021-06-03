@@ -27,4 +27,9 @@ Most of the datasets for which we provide technical support are hosted on the bi
 
 ## Guidelines
 
-We are working on a [guidelines/best practices for data providers and ourselves](https://github.com/ymgan/data-fairy).
+We are working on a [guidelines/best practices for data providers and ourselves](https://github.com/ymgan/data-fairy) as well as documentation for our data publication practice on the wiki page. 
+
+
+## Acknowledgement
+
+The repo and its wiki pages are inspired and adapted from [INBO data publication](https://github.com/inbo/data-publication).
