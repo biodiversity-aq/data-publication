@@ -27,9 +27,9 @@ Most of the datasets for which we provide technical support are hosted on the bi
 
 ## Guidelines
 
-We are working on a [guidelines/best practices for data providers and ourselves](https://github.com/ymgan/data-fairy) as well as documentation for our data publication practice on the wiki page. 
+We are working on a [guidelines/best practices for data providers and ourselves](https://github.com/ymgan/data-fairy) as well as documentation for our data publication practice on the [wiki](https://github.com/biodiversity-aq/data-publication/wiki). 
 
 
 ## Acknowledgement
 
-The repo and its wiki pages are inspired and adapted from [INBO data publication](https://github.com/inbo/data-publication). We are grateful for [open science lab for biodiversity](https://pureportal.inbo.be/portal/en/organisations/open-science-lab-for-biodiversity(0ab4aa1e-b25f-4dc3-90c1-ddcfbc726fe8).html) to share their experiences in data publication with us. 
+The repo and its wiki pages are inspired and adapted from [INBO data publication](https://github.com/inbo/data-publication). We are grateful to [open science lab for biodiversity](https://pureportal.inbo.be/portal/en/organisations/open-science-lab-for-biodiversity(0ab4aa1e-b25f-4dc3-90c1-ddcfbc726fe8).html) to share their experiences in data publication with us. 
