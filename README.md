@@ -33,3 +33,8 @@ We are working on a [guidelines/best practices for data providers and ourselves]
 ## Acknowledgement
 
 The repo and its wiki pages are inspired and adapted from [INBO data publication](https://github.com/inbo/data-publication). We are grateful to [open science lab for biodiversity](https://pureportal.inbo.be/portal/en/organisations/open-science-lab-for-biodiversity(0ab4aa1e-b25f-4dc3-90c1-ddcfbc726fe8).html) to share their experiences in data publication with us. 
+
+
+## Contributors
+
+List of [contributors](https://github.com/biodiversity-aq/data-publication/graphs/contributors) of this repository.
