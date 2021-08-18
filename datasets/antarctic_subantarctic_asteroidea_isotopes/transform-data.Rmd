@@ -20,18 +20,36 @@ head(data)
 names(data)
 ```
 
+## Create occurrence data frame
+
+Data with fields of [occurrence core](https://rs.gbif.org/core/dwc_occurrence_2020-07-15.xml) is subset from the full dataset. This data frame will be written into `occurrence.txt` file.
+
 ```{r}
 # occurrence data frame spans from column 1-37, all columns beyond that belongs to measurement or fact extension
 occ_df <- data[, 1:37]
 head(occ_df)
 ```
 
-```{r echo=FALSE, message=FALSE}
+BOLD IDs are omitted for the moment because it is uncertain which field should be placed under `associatedSequences` or whether [DNA derived data extension](https://rs.gbif.org/extension/gbif/1.0/dna_derived_data_2021-07-05.xml) should be used. 
+
+## Simple function to subset a measurementType from wide table into long measurement or fact table
+
+```{r message=FALSE}
 library(tidyverse)
+
+#' Function to subset a measurementType from wide table to long measurement or fact table
+#'
+#' @param data The data frame which contains wide measurement or fact table.
+#' @param core_id The field name that refers to the core used.
+#' @param measurement_col A string which is the field name of data frame that contains the measurement value. Will be used to populate the measurementValue field.
+#' @param measurement_type A string that defines the measurement type, Will be used to populate measurementType field.
+#' @param measurement_unit A string that states the unit of the measurement. Will be used to populate measurementValue field.
+#' @param measurement_remarks A string of measurement remark. Will be used to populate measurementRemarks field.
+#
 
 create_var_mof <- function(data = data, core_id = "occurrenceID", measurement_col, measurement_type, measurement_unit, measurement_remarks = "") {
   # create a measurement or fact table of a single measurement type from the data
-  # subset the occurrence data
+  # subset from full dataset
   mof <- data %>% 
     # remove rows of measurement which are NULL
     filter(!is.na(!!as.symbol(measurement_col))) %>%  # !!as.symbol is required as column name is passed as string
@@ -50,6 +68,8 @@ create_var_mof <- function(data = data, core_id = "occurrenceID", measurement_co
 ```
 
 
+## Subsets of different measurements
+
 Arm length, disc radius and arm to disc ratio
 
 ```{r}
@@ -59,7 +79,7 @@ rRRatio <- create_var_mof(data = data, core_id = "occurrenceID", measurement_col
 ```
 
 
-delta C13, N15, S34 of tegument and podia
+Delta C13, N15, S34 of tegument and podia
 
 ```{r}
 # d13C
@@ -107,7 +127,9 @@ ratio_CN_podia <- create_var_mof(data = data, core_id = "occurrenceID", measurem
 ```
 
 
-# create measurement or fact data frame
+## Create measurement or fact data frame
+
+Bind each subset together to form measurement or fact data frame.
 
 ```{r}
 mof_df <- rbind(
@@ -134,7 +156,7 @@ dim(mof_df)
 
 ```
 
-Write data frames to files.
+## Write data frames to files.
 
 ```{r message=FALSE}
 library(here)
