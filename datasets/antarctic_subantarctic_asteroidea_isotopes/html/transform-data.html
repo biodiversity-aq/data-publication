@@ -1686,8 +1686,8 @@ head(occ_df)</code></pre>
 
 #&#39; Function to subset a measurementType from wide table to long measurement or fact table
 #&#39;
-#&#39; @param data The data frame which contains wide measurement or fact table.
-#&#39; @param core_id The field name that refers to the core used.
+#&#39; @param data The data frame which contains measurement data in wide format.
+#&#39; @param core_id A string which is the field name of the (occurrence) core ID.
 #&#39; @param measurement_col A string which is the field name of data frame that contains the measurement value. Will be used to populate the measurementValue field.
 #&#39; @param measurement_type A string that defines the measurement type, Will be used to populate measurementType field.
 #&#39; @param measurement_unit A string that states the unit of the measurement. Will be used to populate measurementValue field.
