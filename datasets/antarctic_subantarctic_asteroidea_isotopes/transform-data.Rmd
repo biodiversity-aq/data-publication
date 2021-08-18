@@ -14,15 +14,19 @@ Transform SO isotopes masterfile data into occurrence core and measurement or fa
 
 ```{r}
 # read dataset from url
-data <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSymXtbSO9553BVcX4BWCFBOlSoRhGqg3oPEl4xbKxBWGTW0DfnxvDRtyGefXKUMZzF8mybx36u1J_i/pub?gid=0&single=true&output=tsv", header = TRUE, sep = "\t", check.names = FALSE)
+data <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSfAaU0p3QOsyugCL72TJuHq-pH1XyWGs1A8qIFDp1ndqqehxP4a9Lnc6QGxf1g-qU1abdNHfCwUG7p/pub?gid=193721447&single=true&output=tsv", header = TRUE, sep = "\t", check.names = FALSE)
 
-# occurrence data frame spans from column 1-41, all columns beyond that belongs to measurement or fact extension
-occ_df <- data[, 1:41]
+head(data)
+names(data)
+```
+
+```{r}
+# occurrence data frame spans from column 1-37, all columns beyond that belongs to measurement or fact extension
+occ_df <- data[, 1:37]
 head(occ_df)
 ```
 
-
-```{r echo=FALSE}
+```{r echo=FALSE, message=FALSE}
 library(tidyverse)
 
 create_var_mof <- function(data = data, core_id = "occurrenceID", measurement_col, measurement_type, measurement_unit, measurement_remarks = "") {
@@ -46,11 +50,12 @@ create_var_mof <- function(data = data, core_id = "occurrenceID", measurement_co
 ```
 
 
-Arm length and disc radius
+Arm length, disc radius and arm to disc ratio
 
 ```{r}
-armLength <- create_var_mof(data = data, core_id = "occurrenceID", measurement_col = "R_armLengthInMeters", measurement_type = "Arm_length_R", measurement_unit = "m", measurement_remarks = "")
-discRadius <- create_var_mof(data = data, core_id = "occurrenceID", measurement_col = "r_discRadiusInMeters", measurement_type = "Disc_radius_r", measurement_unit = "m", measurement_remarks = "")
+armLength <- create_var_mof(data = data, core_id = "occurrenceID", measurement_col = "Arm length_R_(cm)", measurement_type = "Arm length_R_(cm)", measurement_unit = "cm", measurement_remarks = "")
+discRadius <- create_var_mof(data = data, core_id = "occurrenceID", measurement_col = "Disc radius_r_(cm)", measurement_type = "Disc radius_r_(cm)", measurement_unit = "cm", measurement_remarks = "")
+rRRatio <- create_var_mof(data = data, core_id = "occurrenceID", measurement_col = "R_r_ratio", measurement_type = "R_r_ratio", measurement_unit = "", measurement_remarks = "")
 ```
 
 
@@ -108,6 +113,7 @@ ratio_CN_podia <- create_var_mof(data = data, core_id = "occurrenceID", measurem
 mof_df <- rbind(
   armLength,
   discRadius,
+  rRRatio,
   d13C_tegument,
   d13C_podia,
   d15N_tegument,
@@ -130,7 +136,7 @@ dim(mof_df)
 
 Write data frames to files.
 
-```{r}
+```{r message=FALSE}
 library(here)
 library(readr)
 outfile_dir <- here("data/processed")
