@@ -152,8 +152,8 @@ mof_df <- rbind(
   ratio_CN_podia
 )
 
-dim(mof_df) 
-
+dim(mof_df)  # dimension of the mof long table
+head(mof_df)  # preview mof table
 ```
 
 ## Write data frames to files.
