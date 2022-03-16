@@ -4,7 +4,7 @@ portal | link
 :-- | :--
 IPT | https://ipt.biodiversity.aq/resource?r=proteker2016-event
 GBIF | https://www.gbif.org/dataset/28120c52-2b34-4db4-b348-812ee1eaf958
-OBIS | 
+OBIS | https://obis.org/dataset/cc62b9e8-dd4a-4638-8061-b72721568e33
 
 ## Data processing
 
