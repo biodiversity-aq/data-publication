@@ -3,11 +3,11 @@
 
 ## Files
 
-Both files in `data/processed/` correspond to sheets in file 2021-07-02_ANTARXXVII-leg1 named version 2021-07-15T12:00Z on Google Drive.
+Both files in `data/processed/` correspond to sheets in file 2021-07-02_ANTARXXVII-leg1 named version 2022-03-30T11:10Z on Google Drive.
 
 ```
-2021-07-15T1200Z_ANTARXXVII-leg1-occurrenceCore.tsv
-2021-07-15T1200Z_ANTARXXVII-leg1-multimedia.tsv 
+2022-03-30T1110Z_ANTARXXVII-leg1-occurrenceCore.tsv
+2022-03-30T1110Z_ANTARXXVII-leg1-multimedia.tsv 
 ```
 
 ## Remarks
