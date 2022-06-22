@@ -2,6 +2,7 @@
 
 portal | link
 :-- | :--
+IPT | https://ipt.biodiversity.aq/resource?r=antarctic_subantarctic_asteroidea_isotopes
 GBIF | https://www.gbif.org/dataset/ff3984d7-84bd-4f3a-b843-666faa4c1696
 OBIS | https://obis.org/dataset/c6b9cd54-3c38-4054-b5e6-d331414d5899
 
