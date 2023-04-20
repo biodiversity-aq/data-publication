@@ -24,6 +24,11 @@ Most of the datasets for which we provide technical support are hosted on the bi
 - [Datasets on GBIF](https://www.gbif.org/installation/27c24cba-13c5-47d1-96a1-16abd8f11437): where datasets are discoverable and interoperable
 - [Datasets on OBIS](https://obis.org/node/dc6c6ea2-83f5-4b18-985a-9efff6320d69): where datasets are discoverable and interoperable
 
+## Data Policy
+
+We follow SCAR data policy when we publish the datasets
+
+> The Scientific Committee on Antarctic Research. (2023). SCAR Report 42 - September 2022 - SCAR Data Policy (2022). Zenodo. https://doi.org/10.5281/zenodo.7825314
 
 ## Guidelines
 
