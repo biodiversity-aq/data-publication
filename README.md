@@ -32,7 +32,7 @@ We follow SCAR data policy when we publish the datasets
 
 ## Guidelines
 
-We are working on a [guidelines/best practices for data providers and ourselves](https://github.com/ymgan/data-fairy) as well as documentation for our data publication practice on the [wiki](https://github.com/biodiversity-aq/data-publication/wiki). 
+Documentation for our data publication practice is available on this [wiki](https://github.com/biodiversity-aq/data-publication/wiki). 
 
 
 ## Acknowledgement
